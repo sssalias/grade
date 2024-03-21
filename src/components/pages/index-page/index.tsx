@@ -1,12 +1,10 @@
-import SimpleField from 'src/components/atoms/fields/simple-field'
+import MainTemplate from 'src/components/templates/main-template'
 
 const IndexPage = () => {
-
-
     return (
-        <div>
-            <SimpleField label='Логин / E-mail' type='email'/>
-        </div>
+        <MainTemplate>
+            <span></span>
+        </MainTemplate>
     )
 }
 

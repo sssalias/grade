@@ -1,0 +1,28 @@
+footer {
+  width: 100%;
+  /*position: absolute;*/
+  bottom: 0;
+  height: 70px;
+}
+.container {
+  height: 100%;
+  width: 100%;
+}
+.wrapper {
+  height: 100%;
+  width: 100%;
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(16, 0, 37, 0.25);
+}
+
+.copyright {}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}

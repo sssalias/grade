@@ -44,3 +44,11 @@
                   var(--main-gray)
   );
 }
+
+.ghost {
+  @include buttonOutlined(
+                  transparent,
+                  transparent,
+                  transparent
+  )
+}
