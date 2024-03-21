@@ -1,0 +1,38 @@
+@mixin buttonFilled($bg-color, $txt-color,
+                    $bg-color-hover, $txt-color-hover,
+                    $bg-color-disabled, $txt-color-disabled,) {
+  background-color: $bg-color;
+  color: $txt-color;
+  transition: .4s;
+  border: none;
+
+  &:hover {
+    background-color: $bg-color-hover;
+    color: $txt-color-hover;
+    transition: .4s;
+  }
+
+  &:disabled {
+    background-color: $bg-color-disabled;
+    color: $txt-color-disabled;
+  }
+}
+
+@mixin buttonOutlined($color,
+                      $color-hover,
+                      $color-disabled,) {
+  background-color: transparent;
+  border-radius: 0;
+  border: 2px solid $color;
+  transition: .4s;
+
+  &:hover {
+    color: $color-hover;
+    border-color: $color-hover;
+    transition: .4s;
+  }
+  &:disabled {
+    border-color: $color-disabled;
+    color: $color-disabled;
+  }
+}

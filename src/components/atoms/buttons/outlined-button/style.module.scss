@@ -1,0 +1,9 @@
+@import 'src/assets/mixins/buttonMixin';
+
+.button {
+  @include buttonOutlined(
+    var(--main-white),
+    var(--main-lime),
+    var(--main-gray)
+  )
+}

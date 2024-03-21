@@ -1,0 +1,58 @@
+:root {
+  font-family: Inter, sans-serif;
+
+  --main-bright-violet: #7540F0;
+  --main-violet: #301070;
+  --main-lime: #BBDD00;
+  --main-orange: #FA7000;
+  --main-yellow: #EECD00;
+  --main-dark-violet: #200050;
+  --main-light-gray: #E0E0E0;
+  --main-shade-violet: #100025;
+  --main-dark-gray: #404040;
+  --main-gray: #808080;
+  --main-white: #FFFFFF;
+  --main-black: #000000;
+
+  &::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background-color: var(--main-dark-violet);
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: 7px;
+    background-color: var(--main-dark-violet);
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    border-radius: 5px;
+    background-color: var(--main-bright-violet);
+  }
+}
+
+h1 {
+  font-size: 48px;
+}
+h2 {
+  font-size: 32px;
+}
+h3 {
+  font-size: 24px;
+}
+h4, label {
+  font-size: 16px;
+}
+span, p, a, input, button {
+  font-size: 16px;
+}
+
+button {
+  border-radius: 4px;
+  padding: 13px 20px;
+  cursor: pointer;
+}
+

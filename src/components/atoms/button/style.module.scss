@@ -1,0 +1,15 @@
+@import "src/assets/mixins/buttonMixin";
+
+.button {
+}
+
+.filled_button {
+  @include buttonFilled(
+                  var(--main-white),
+                  var(--main-black),
+                  var(--main-light-gray),
+                  var(--main-black),
+                  var(--main-gray),
+                  var(--main-light-gray)
+  );
+}
