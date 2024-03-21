@@ -1,0 +1,29 @@
+.label {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  &::after {
+    transition: .4s;
+    content: '';
+    flex: auto;
+    border-top: 2px solid var(--main-light-gray);
+    border-radius: 4px;
+  }
+}
+
+.field_focus {
+  &::after {
+    transition: .4s;
+    content: '';
+    flex: auto;
+    border-top: 2px solid var(--main-black);
+    border-radius: 4px;
+  }
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+}

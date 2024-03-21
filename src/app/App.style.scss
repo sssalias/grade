@@ -46,7 +46,7 @@ h3 {
 h4, label {
   font-size: 16px;
 }
-span, p, a, input, button {
+span, p, a, input, button, label {
   font-size: 16px;
 }
 
@@ -56,3 +56,9 @@ button {
   cursor: pointer;
 }
 
+label {
+  font-weight: bolder;
+}
+input {
+  outline: none;
+}
