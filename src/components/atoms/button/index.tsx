@@ -29,7 +29,7 @@ const Button = ({onClick, children, disabled, variant, icon, iconHover, iconPosi
             className={classNames(
                 classes.btn,
                 variant ? classes[variant] : classes.filled_button,
-            iconPosition ? classes[iconPosition] : classes.left
+            iconPosition ? classes[iconPosition] : classes.left,
         )}>
             {isHover ? iconHover : icon}
             <span>{children}</span>

@@ -1,4 +1,4 @@
-import classes from './style.module.scss'
+import classes from 'src/components/atoms/icon/style.module.scss'
 
 
 export type PropsType = {
