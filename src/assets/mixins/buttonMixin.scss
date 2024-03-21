@@ -3,13 +3,13 @@
                     $bg-color-disabled, $txt-color-disabled,) {
   background-color: $bg-color;
   color: $txt-color;
-  transition: .4s;
+  transition: .2s;
   border: none;
 
   &:hover {
     background-color: $bg-color-hover;
     color: $txt-color-hover;
-    transition: .4s;
+    transition: .2s;
   }
 
   &:disabled {
@@ -24,15 +24,17 @@
   background-color: transparent;
   border-radius: 0;
   border: 2px solid $color;
-  transition: .4s;
+  transition: .2s;
 
   &:hover {
     color: $color-hover;
     border-color: $color-hover;
-    transition: .4s;
+    transition: .2s;
   }
   &:disabled {
     border-color: $color-disabled;
     color: $color-disabled;
   }
 }
+
+
