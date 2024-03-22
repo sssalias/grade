@@ -1,7 +1,7 @@
 import {ReactNode} from 'react'
 import Header from 'src/components/organisms/header'
 import classes from './style.module.scss'
-// import Footer from 'src/components/organisms/footer'
+import Footer from 'src/components/organisms/footer'
 
 export type PropsType = {
     children: ReactNode
@@ -15,7 +15,7 @@ const MainTemplate = ({children}:PropsType) => {
                 {children}
             </main>
             {/* TODO: create normal footer*/}
-            {/*<Footer/>*/}
+            <Footer/>
         </div>
     )
 }
