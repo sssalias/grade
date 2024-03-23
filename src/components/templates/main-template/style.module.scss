@@ -10,5 +10,14 @@
 }
 
 .wrapper {
+  width: 70%;
+  margin: 0 auto;
+  padding: 128px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
 
+.title {
+  text-transform: uppercase;
 }
