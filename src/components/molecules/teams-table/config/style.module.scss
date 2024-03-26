@@ -1,0 +1,14 @@
+.team__container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.team__title__container {
+
+    h3 {
+        color: var(--main-lime);
+        font-weight: normal;
+    }
+
+}

@@ -1,11 +1,13 @@
 import Table from 'rc-table'
-import {columns} from 'src/components/molecules/teams-table/config'
+import { useTeamsTable } from './config'
+import { useTeamsStore } from 'src/store'
 
 const TeamsTable = () => {
-    return (
-        <Table columns={columns}>
+    const space = useTeamsStore(state => state.space)
+    const {columns, data} = useTeamsTable()
 
-        </Table>
+    return (
+        <Table columns={columns} data={data.slice(0, space)}/>
     )
 }
 

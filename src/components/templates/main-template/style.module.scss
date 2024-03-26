@@ -15,9 +15,11 @@
   padding: 128px 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 50px;
 }
 
 .title {
+  align-self: flex-start;
   text-transform: uppercase;
 }

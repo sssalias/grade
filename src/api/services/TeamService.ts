@@ -1,7 +1,7 @@
 import {IBaseService} from 'src/api/services/IBaseService.ts'
 import {instance} from 'src/api/config'
 
-export class TeamService implements IBaseService {
+class TeamService implements IBaseService {
     public path = '/teams'
 
     public async getData (){
@@ -9,3 +9,6 @@ export class TeamService implements IBaseService {
         return data
     }
 }
+
+
+export default new TeamService()
