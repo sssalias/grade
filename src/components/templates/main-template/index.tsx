@@ -3,21 +3,22 @@ import Header from 'src/components/organisms/header'
 import classes from './style.module.scss'
 import Footer from 'src/components/organisms/footer'
 import classNames from 'classnames'
+import Spinner from 'src/components/atoms/spinner'
 
 export type PropsType = {
     children?: ReactNode
-    title?: string
+    title?: string,
+    loading? :boolean
 }
 
-const MainTemplate = ({children, title}:PropsType) => {
+const MainTemplate = ({children, title, loading=false}:PropsType) => {
     return (
         <div className={classes.container}>
             <Header/>
             <main className={classes.wrapper}>
                 <h1 className={classNames(classes.title, 'bright__text')}>{title}</h1>
-                {children}
+                {loading ? <Spinner/> : children}
             </main>
-            {/* TODO: create normal footer*/}
             <Footer/>
         </div>
     )

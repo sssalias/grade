@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <header className={classes.container}>
             <div className={classes.wrapper}>
-                <Button variant='ghost' icon={<Icon path={burgerWhite}/>} iconHover={<Icon path={burgerLime}/>}></Button>
+                <Button variant='icon' icon={<Icon path={burgerWhite}/>} iconHover={<Icon path={burgerLime}/>}></Button>
                 <Logo size='sm'/>
             </div>
         </header>

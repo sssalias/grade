@@ -52,3 +52,12 @@
                   transparent
   )
 }
+
+.icon {
+  @include buttonOutlined(
+    transparent,
+    transparent,
+    transparent
+  );
+  padding: 0; 
+}

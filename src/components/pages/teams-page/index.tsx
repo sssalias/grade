@@ -7,6 +7,7 @@ import Button from 'src/components/atoms/button'
 const TeamsPage = () => {
 
     const get = useTeamsStore(state => state.get)
+    const loading = useTeamsStore(state => state.loading)
     const increaseSpace = useTeamsStore(state => state.increaseSpace)
 
     useEffect(() => {
@@ -15,7 +16,7 @@ const TeamsPage = () => {
 
     
     return (
-        <MainTemplate title='СПИСОК КОМАНД'>
+        <MainTemplate title='СПИСОК КОМАНД' loading={loading}>
             <TeamsTable/>
             <Button variant='filled_normal' onClick={increaseSpace}>Загрузить ещё</Button>
         </MainTemplate>

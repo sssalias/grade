@@ -6,7 +6,7 @@ export type PropsType = {
     onClick?: () => void
     children?: ReactNode
     disabled?: boolean
-    variant?: 'filled_normal' | 'filled_violet' | 'outline' | 'ghost'
+    variant?: 'filled_normal' | 'filled_violet' | 'outline' | 'ghost' | 'icon'
     icon?: ReactNode
     iconHover?: ReactNode
     iconPosition?: 'left' | 'right'
