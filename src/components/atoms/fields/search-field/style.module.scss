@@ -1,0 +1,38 @@
+.container {
+    background-color: var(--main-dark-mask);
+    min-width: 640px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px 4px 0 0;
+    &::after {
+        transition: .4s;
+        content: '';
+        flex: auto;
+        background-color: var(--main-light-gray);
+        border-radius: 4px;
+        height: 2px;
+      } 
+}
+.wrapper {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    
+}
+
+.button, .input {
+    padding: 20px;
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--main-white);
+} 
+
+.input {
+    flex-grow: 1;
+    font-weight: normal;
+}
+.input::placeholder {
+    color: var(--main-white);
+}

@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 128px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+}
+.button {
+    flex-grow: 1;
+}
+
+.info__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}

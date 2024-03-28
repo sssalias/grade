@@ -10,11 +10,8 @@ const TeamsPage = () => {
     const loading = useTeamsStore(state => state.loading)
     const increaseSpace = useTeamsStore(state => state.increaseSpace)
 
-    useEffect(() => {
-        get()
-    }, [])
+    useEffect(() => { get() }, [])
 
-    
     return (
         <MainTemplate title='СПИСОК КОМАНД' loading={loading}>
             <TeamsTable/>

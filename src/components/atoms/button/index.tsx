@@ -10,10 +10,11 @@ export type PropsType = {
     icon?: ReactNode
     iconHover?: ReactNode
     iconPosition?: 'left' | 'right'
+    className?: string
 }
 
 
-const Button = ({onClick, children, disabled, variant, icon, iconHover, iconPosition}:PropsType) => {
+const Button = ({onClick, children, disabled, variant, icon, iconHover, iconPosition, className}:PropsType) => {
 
     const [isHover, setHover] = useState(false)
 
@@ -27,11 +28,12 @@ const Button = ({onClick, children, disabled, variant, icon, iconHover, iconPosi
             onClick={onClick}
             disabled={disabled}
             className={classNames(
+                className,
                 classes.btn,
                 variant ? classes[variant] : classes.filled_button,
             iconPosition ? classes[iconPosition] : classes.left,
         )}>
-            {isHover ? iconHover : icon}
+            {isHover ? iconHover ? iconHover :icon : icon}
             <span>{children}</span>
         </button>
     )
