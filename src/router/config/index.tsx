@@ -1,5 +1,6 @@
 import {ReactNode} from 'react'
 import {IndexPage, TeamsPage, MatchesPage, MatchDetailsPage} from 'src/components/pages'
+import LoginPage from 'src/components/pages/modal/auth/login'
 
 export type RouteType = {
     path: string
@@ -11,4 +12,8 @@ export const routes: RouteType[] = [
     {path: '/teams', element: <TeamsPage/>},
     {path: '/matches', element: <MatchesPage/>},
     {path: '/matches/:id', element: <MatchDetailsPage/>}
+]
+
+export const modalRoutes: RouteType[] = [
+    {path: '/auth/login', element: <LoginPage/>}
 ]

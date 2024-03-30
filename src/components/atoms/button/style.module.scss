@@ -38,6 +38,7 @@
 }
 
 .outline {
+  color: white;
   @include buttonOutlined(
                   var(--main-white),
                   var(--main-lime),
@@ -46,13 +47,14 @@
 }
 
 .ghost {
-  @include buttonOutlined(
-                  transparent,
-                  transparent,
-                  transparent
-  )
-}
+  color: white;
+  background: none;
+  border: none;
 
+  &:disabled {
+    color: var(--main-gray);
+  }
+}
 .icon {
   @include buttonOutlined(
     transparent,

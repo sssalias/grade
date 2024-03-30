@@ -5,11 +5,15 @@ import searchWhite from 'src/assets/img/icons/search/search_white.svg'
 import classes from './style.module.scss'
 
 
-const SearchField = () => {
+type PropsType = {
+    placeholder?: string
+}
+
+const SearchField = ({placeholder}:PropsType) => {
     return (
         <div className={classes.container}>
             <div className={classes.wrapper}>
-                <input placeholder='Поиск по сайту...' type="text" className={classes.input}/>
+                <input placeholder={placeholder} type="text" className={classes.input}/>
                 <Button className={classes.button} variant='icon' icon={
                     <Icon path={searchWhite}/>
                 }></Button>

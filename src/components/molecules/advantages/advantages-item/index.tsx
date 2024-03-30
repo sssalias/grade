@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import classes from './style.module.scss'
 
 type PropsType = {
     icon: ReactNode
@@ -8,10 +9,10 @@ type PropsType = {
 
 const AdvantagesItem = ({icon, title, body}:PropsType) => {
   return (
-    <div>
+    <div className={classes.container}>
         {icon}
-        <h2>{title}</h2>
-        <h4>{body}</h4>
+        <h2 className={classes.title}>{title}</h2>
+        <h4 className={classes.body}>{body}</h4>
     </div>
   )
 }

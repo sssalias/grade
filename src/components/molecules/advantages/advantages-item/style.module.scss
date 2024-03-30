@@ -1,0 +1,16 @@
+.container {
+  color: var(--main-brightest-violet);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.body {
+  text-align: center;
+  padding: 0 50px;
+}
