@@ -34,7 +34,7 @@ const Button = ({onClick, children, disabled, variant, icon, iconHover, iconPosi
             iconPosition ? classes[iconPosition] : classes.left,
         )}>
             {isHover ? iconHover ? iconHover :icon : icon}
-            <span>{children}</span>
+            {children ? <span>{children}</span> : null}
         </button>
     )
 }

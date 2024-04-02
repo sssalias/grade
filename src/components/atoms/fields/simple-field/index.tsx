@@ -14,13 +14,11 @@ export type PropsType = {
 const SimpleField = ({label, type, name, placeholder}:PropsType) => {
 
     const [isFocus, setFocus] = useState(false)
-
-    const handleFocus = () => setFocus(!isFocus)
                                                 
     return (
         <label className={classNames(classes.label, isFocus ? classes.field_focus : null)}>
             <span>{label}</span>
-            <input onFocus={handleFocus} className={classes.input} type={type} name={name} placeholder={placeholder} />
+            <input onFocus={() => setFocus(true)} onBlur={() => setFocus(false)} className={classes.input} type={type} name={name} placeholder={placeholder} />
         </label>
     )
 }

@@ -16,9 +16,33 @@
 
 .container {
   background-color: white;
-  border-radius: 5px;
-  padding: 20px 40px;
+  border-radius: 10px;
+  padding: 20px;
   animation: OpenContainer .2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  align-self: flex-end;
+}
+
+.title {
+  text-transform: uppercase;
+  background: -moz-linear-gradient(45deg, rgba(117,64,240,1) 0%, rgba(123,97,255,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(117,64,240,1) 0%, rgba(123,97,255,1) 100%);
+  background: linear-gradient(45deg, rgba(117,64,240,1) 0%, rgba(123,97,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7540f0",endColorstr="#7b61ff",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.body {
+  padding: 0 60px 30px 60px;  
+}
+
+.content {
+  
 }
 
 @keyframes OpenWrapper {

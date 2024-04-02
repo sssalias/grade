@@ -39,7 +39,8 @@ const Aside = () => {
                 </div>
 
                 <div className={classes.footer}>
-                    <Button onClick={() => navigate('auth/login', {state: {previousLocation: location}})} iconHover={<Icon path={userLime}/>} icon={<Icon path={userWhite}/>} className={classes.aside__button} variant='outline'>Вход</Button>
+                    <Button onClick={() => navigate('/auth/login', {state: {previousLocation: location}})} iconHover={<Icon path={userLime}/>} icon={<Icon path={userWhite}/>} className={classes.aside__button} variant='outline'>Вход</Button>
+                    <Button onClick={() => navigate('/auth/register', {state: {previousLocation: location}})} iconHover={<Icon path={userLime}/>} icon={<Icon path={userWhite}/>} className={classes.aside__button} variant='outline'>Регистрация</Button>
                 </div>
             </div>
         </aside>

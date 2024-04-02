@@ -1,0 +1,30 @@
+.form {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    label {
+        width: 100%;
+    }
+}
+
+/* login link */
+
+
+.login__link__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__link__text {
+    color: var(--main-gray);
+}
+
+.login__link__button {
+    padding: 0 20px;
+    color: black;
+}
