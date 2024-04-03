@@ -1,5 +1,5 @@
 import classes from './style.module.scss'
-import {ReactNode, useState} from 'react'
+import {ButtonHTMLAttributes, DetailedHTMLProps, LegacyRef, ReactNode, RefAttributes, useState} from 'react'
 import classNames from 'classnames'
 
 export type PropsType = {
@@ -11,10 +11,12 @@ export type PropsType = {
     iconHover?: ReactNode
     iconPosition?: 'left' | 'right'
     className?: string
+    ref?: React.RefAttributes<HTMLButtonElement> & LegacyRef<HTMLButtonElement> | undefined
+
 }
 
 
-const Button = ({onClick, children, disabled, variant, icon, iconHover, iconPosition, className}:PropsType) => {
+const Button = ({onClick, children, disabled, variant, icon, iconHover, iconPosition, className, ref}:PropsType) => {
 
     const [isHover, setHover] = useState(false)
 
@@ -23,6 +25,7 @@ const Button = ({onClick, children, disabled, variant, icon, iconHover, iconPosi
 
     return (
         <button
+            ref={ref}
             onMouseEnter={handleEnter}
             onMouseLeave={handleLeave}
             onClick={onClick}
