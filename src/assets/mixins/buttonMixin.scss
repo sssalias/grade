@@ -15,6 +15,7 @@
   &:disabled {
     background-color: $bg-color-disabled;
     color: $txt-color-disabled;
+    font-weight: normal;
   }
 }
 
