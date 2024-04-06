@@ -8,9 +8,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .navigation {
   display: flex;
+  // flex-wrap: wrapcr
   gap: 40px;
 }
 .navigation__item {

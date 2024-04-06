@@ -5,6 +5,10 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+
+  &:disabled {
+    cursor: default;
+  }
 }
 
 .left {
