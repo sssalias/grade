@@ -1,10 +1,10 @@
 import Table from 'rc-table'
 import { useTeamsTable } from './config'
-import { useTeamsStore } from 'src/store'
+import {useTeamsStore} from 'src/store'
 
 const TeamsTable = () => {
-    const space = useTeamsStore(state => state.space)
     const {columns, data} = useTeamsTable()
+    const {space} = useTeamsStore()
 
     return (
         <Table columns={columns} data={data.slice(0, space)}/>
