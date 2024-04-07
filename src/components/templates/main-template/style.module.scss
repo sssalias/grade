@@ -22,4 +22,8 @@
 .title {
   align-self: flex-start;
   text-transform: uppercase;
+  background: #E0D8FF;
+  background: linear-gradient(to right, #E0D8FF 0%, #EBC1FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
