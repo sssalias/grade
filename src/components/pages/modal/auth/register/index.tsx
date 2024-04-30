@@ -20,7 +20,6 @@ const RegisterPage = () => {
 
   const [response, setResponse] = useState<RegisterResponse>()
 
-
   useEffect(() => {
     setResponse(registerValidate(data)) 
   }, [data])
@@ -28,7 +27,6 @@ const RegisterPage = () => {
   return (
     <ModalTemplate title='Регистрация'>
       <form onSubmit={e => e.preventDefault()} className={classes.form}>
-        {/* <h2>{response?.message}</h2> */}
         <fieldset>
           <SimpleField value={data.email} onChange={(value) => setData({...data, email: value})} label='E-mail' type='email'/>
           <SimpleField value={data.login} onChange={(value) => setData({...data, login: value})} label='Логин' type='text'/>

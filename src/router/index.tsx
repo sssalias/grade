@@ -17,7 +17,6 @@ const AppRouter = () => {
             </Routes>
             {previousLocation && (
                 <Routes>
-                    {/*<Route path='/auth/login' element={<LoginPage />} />*/}
                     {modalRoutes.map(route => <Route path={route.path} key={route.path} element={route.element}/>)}
                 </Routes>
             )}

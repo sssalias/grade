@@ -1,5 +1,5 @@
 import classes from './style.module.scss'
-import {ButtonHTMLAttributes, DetailedHTMLProps, LegacyRef, ReactNode, RefAttributes, useState} from 'react'
+import {LegacyRef, ReactNode, useState} from 'react'
 import classNames from 'classnames'
 
 export type PropsType = {
@@ -12,7 +12,6 @@ export type PropsType = {
     iconPosition?: 'left' | 'right'
     className?: string
     ref?: React.RefAttributes<HTMLButtonElement> & LegacyRef<HTMLButtonElement> | undefined
-
 }
 
 

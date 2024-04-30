@@ -1,6 +1,6 @@
 import Icon from 'src/components/atoms/icon'
 import classes from './style.module.scss'
-import { parseTime } from 'src/utils/time'
+import { parseDate } from 'src/utils/parse/date'
 import ProgressBar from 'src/components/atoms/progress-bar'
 import { getMaxValue } from 'src/utils/sort'
 import {useTeamsStore} from 'src/store/useTeamsStore'
@@ -18,7 +18,7 @@ export const useTeamsTable = () => {
                 />
                 <div className={classes.team__title__container}>
                     <h3>{inf}</h3>
-                    <h4>{parseTime(record.last_match_time)}</h4>
+                    <h4>{parseDate(record.last_match_time)}</h4>
                 </div>
             </div>
         )},

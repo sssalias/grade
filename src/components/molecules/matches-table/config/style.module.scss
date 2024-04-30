@@ -1,0 +1,22 @@
+.link__container {
+    
+    h4 {
+        color: var(--main-lime);
+    }
+
+    span {
+        color: var(--main-white);
+    }
+}
+
+.icons__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+
+
+    img {
+        border-radius: 4px;
+    }
+}

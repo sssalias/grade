@@ -1,29 +1,19 @@
-import { useEffect, useState } from 'react'
+import { useMatchesDetailsFetchHook } from 'src/api/hooks/useMatchesDetailsFetchHook'
+import { useMatchesFetchHook } from 'src/api/hooks/useMatchesFetchHook'
 import Button from 'src/components/atoms/button'
 import MatchesTable from 'src/components/molecules/matches-table'
 import MainTemplate from 'src/components/templates/main-template'
 import { useMatchesStore } from 'src/store/useMatchesStore'
 
+
 const MatchesPage = () => {
-
-    const get = useMatchesStore(state => state.get)
-
-    const [startValue, setStartValue] = useState(0)
-    const [endValue, setEndValue] = useState(3)
-
-    const step = useMatchesStore(state => state.step)
-
-    const handleClick = () => {
-        setStartValue(endValue)
-        setEndValue(endValue + step)
-    }
-
-    useEffect(() => { get(startValue, endValue), [] })
-
+    useMatchesFetchHook()
+    const {increase} = useMatchesStore()
+    const {loading} = useMatchesDetailsFetchHook()
     return (
-        <MainTemplate title='Список матчей'>
+        <MainTemplate title='Список матчей' loading={loading}>
             <MatchesTable/>
-            <Button variant='filled_normal' onClick={handleClick}>Загрузить ещё</Button>
+            <Button onClick={increase} variant='filled_normal'>Загрузить ещё</Button>
         </MainTemplate>
     )
 }
