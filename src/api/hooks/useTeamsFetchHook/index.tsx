@@ -12,6 +12,7 @@ export const useTeamsFetchHook = () => {
         },
         {
             onSuccess: (data:TeamDto[]) => {
+                console.log(data)
                 setTeams(data)
             }
         }
