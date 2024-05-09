@@ -6,13 +6,14 @@ import { useMatchesStore } from 'src/store/useMatchesStore'
 export const useMatchesFetchHook = () => {
 
     const {set} = useMatchesStore()
-
     
     return useQuery(
         'matches',
         async () => await MatchesService.getData(),
         {
-            onSuccess: ({data}) => set(data)
+            onSuccess: ({data}) => {
+                set(data)
+            }
         }
     )
 }

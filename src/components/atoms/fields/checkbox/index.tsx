@@ -21,6 +21,7 @@ const Checkbox = ({label, onChange}:PropsType) => {
                 onChange ? onChange(!isChecked) : null
             }} className={classNames(classes.checkbox, isChecked ? classes.checkbox_checked : null)} type="checkbox"/>
         </label>
+        
     )
 }
 

@@ -4,9 +4,6 @@ import { IBaseService } from './IBaseService'
 
 import heroes from 'src/assets/constants/heroes.json'
 
-
-// import constants from 'dotaconstants'
-
 class MatchesService implements IBaseService {
     public path = '/proMatches'
     public subPath = '/matches'
@@ -20,6 +17,12 @@ class MatchesService implements IBaseService {
     }
     public getHeroIcon(heroId: number) {
         return 'https://cdn.cloudflare.steamstatic.com' + Object.values(heroes).filter(el => el.id === heroId)[0].img
+    }
+    public async getSomeMatchDetails(match_id:string | undefined) {
+        if (!match_id) {
+            return null
+        }
+        return await instance.get(`${this.subPath}/${match_id}`)
     }
 }
 

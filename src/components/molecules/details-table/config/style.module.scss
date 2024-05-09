@@ -1,0 +1,63 @@
+
+
+.player__container {
+
+    padding-left: 20px;
+    display: flex;
+    justify-content: baseline;
+    gap: 5px;
+    font-weight: normal;
+
+    img {
+        border-radius: 2px;
+    }
+
+    h4 {
+        color: var(--main-lime);
+    }
+}
+
+.level, .assists, .lhdh, .gmpxpm, .hd, .td, .hh {
+    color: var(--main-brightest-violet);
+}
+.kills {
+    color: var(--main-lime);
+}
+.deaths {
+    color: var(--main-orange);
+}
+.net {
+    color: var(--main-yellow);
+}
+
+.items {}
+
+.caption__container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-weight: bold;
+
+    span {
+        color: var(--main-brightest-violet);
+    }
+    h4 {
+        color: white;
+    }
+    div {
+        border-radius: 30px;
+        padding: 10px 15px;
+    }
+}
+
+.winner {
+   color: var(--main-lime);
+   background-color: rgba(187, 221, 0, .25); 
+}
+
+.loser {
+    background-color: rgba(250, 112, 0, .25);
+    color: var(--main-orange);
+}
+

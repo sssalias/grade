@@ -10,10 +10,10 @@ const TeamsPage = () => {
     const btn = useRef<null | HTMLButtonElement>(null)
 
     const {increaseSpace} = useTeamsStore()
-    const response = useTeamsFetchHook()
+    const {isLoading} = useTeamsFetchHook()
 
     return (
-        <MainTemplate title='СПИСОК КОМАНД' loading={response.isLoading}>
+        <MainTemplate title='СПИСОК КОМАНД' loading={isLoading}>
             <TeamsTable/>
             <Button ref={btn} variant='filled_normal' onClick={increaseSpace}>Загрузить ещё</Button>
         </MainTemplate>

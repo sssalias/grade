@@ -13,7 +13,8 @@ interface MatchesState {
 interface MatchesActions {
     set: (data: any[]) => void,
     increase: () => void,
-    setDetails: (data: any[]) => void
+    setDetails: (data: any[]) => void,
+    clearData: () => void
 }
 
 
@@ -31,5 +32,8 @@ export const useMatchesStore = create<MatchesState & MatchesActions>()(immer(set
     },
     setDetails: (data) => {
         setState(state => ({dataDetails: [...state.dataDetails, ...data]}))
+    },
+    clearData: () => {
+        setState({data: [], dataDetails: [], step: 2, start: 0, end: 3})
     }
 })))
