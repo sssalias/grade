@@ -8,13 +8,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 }
 .navigation {
   display: flex;
   // flex-wrap: wrapcr
   gap: 40px;
+  
 }
 .navigation__item {
   cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: max-content;
+  }
+  .wrapper {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navigation {
+    margin: 20px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
