@@ -27,3 +27,14 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 50px 0;
+  }
+  .container {
+    background-size: auto;
+    background-position-x: right;
+  }      
+}

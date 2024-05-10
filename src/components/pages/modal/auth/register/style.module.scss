@@ -17,3 +17,12 @@
     
     }
 }
+
+@media screen and (max-width: 480px) {
+    .form {
+        justify-content: center;
+        fieldset {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

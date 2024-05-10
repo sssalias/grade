@@ -35,3 +35,15 @@
     flex-grow: 1;
     gap: 50px;
 }
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        gap: 50px;
+    }
+    .actions {
+        width: 240px;
+    }
+    .navigation {
+        flex-direction: column;
+    }
+}
