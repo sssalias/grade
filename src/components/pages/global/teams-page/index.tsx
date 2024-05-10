@@ -1,5 +1,5 @@
 import MainTemplate from 'src/components/templates/main-template'
-import TeamsTable from 'src/components/molecules/teams-table'
+import TeamsTable from 'src/components/molecules/tables/teams-table'
 import Button from 'src/components/atoms/button'
 import {useTeamsStore} from 'src/store/useTeamsStore'
 import {useTeamsFetchHook} from 'src/api/hooks/useTeamsFetchHook'

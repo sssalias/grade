@@ -5,7 +5,7 @@ import { parseDate } from 'src/utils/parse/date'
 
 import classes from './style.module.scss'
 import { parseTime } from 'src/utils/parse/time'
-import MatchesService from 'src/api/services/MatchesService'
+import MatchesService from 'src/api/services/MatchesService.ts'
 import Icon from 'src/components/atoms/icon'
 
 export const useMatchesTable = () => {

@@ -1,5 +1,5 @@
 import { useSomeMatchDetailsFetchHook } from 'src/api/hooks/useSomeMatchDetailsFetchHook'
-import DetailsTable from 'src/components/molecules/details-table'
+import DetailsTable from 'src/components/molecules/tables/details-table'
 import MatchData from 'src/components/organisms/match-data'
 import MainTemplate from 'src/components/templates/main-template'
 

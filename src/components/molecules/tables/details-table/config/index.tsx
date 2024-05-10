@@ -4,7 +4,7 @@ import { useMatchDetailsStore } from 'src/store/useMatchDetailsStore'
 import classes from './style.module.scss'
 import { PlayerDto } from 'src/api/dto/match'
 import Icon from 'src/components/atoms/icon'
-import MatchesService from 'src/api/services/MatchesService'
+import MatchesService from 'src/api/services/MatchesService.ts'
 
 
 import backpackLime from 'src/assets/img/icons/backpack/backpack_lime.svg'
