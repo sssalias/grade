@@ -33,14 +33,13 @@ const Aside = () => {
 
                 <div className={classes.body}>
                     <SearchField placeholder='Найти профиль'/>
-                    <Button className={classes.navigation_button} icon={<Icon path={arrowWhite}/>} iconPosition='right' variant='ghost'>Список мачтей</Button>
-                    <Button className={classes.navigation_button} icon={<Icon path={arrowWhite}/>} iconPosition='right' variant='ghost'>Список команд</Button>
+                    <Button onClick={() => navigate('/matches')} className={classes.navigation_button} icon={<Icon path={arrowWhite}/>} iconPosition='right' variant='ghost'>Список мачтей</Button>
+                    <Button onClick={() => navigate('/teams')} className={classes.navigation_button} icon={<Icon path={arrowWhite}/>} iconPosition='right' variant='ghost'>Список команд</Button>
                     <Button className={classes.navigation_button} icon={<Icon path={arrowWhite}/>} iconPosition='right' variant='ghost' disabled={true}>Сравнение матчей</Button>
                 </div>
 
                 <div className={classes.footer}>
                     <Button onClick={() => navigate('/auth/login', {state: {previousLocation: location}})} iconHover={<Icon path={userLime}/>} icon={<Icon path={userWhite}/>} className={classes.aside__button} variant='outline'>Вход</Button>
-                    <Button onClick={() => navigate('/auth/register', {state: {previousLocation: location}})} iconHover={<Icon path={userLime}/>} icon={<Icon path={userWhite}/>} className={classes.aside__button} variant='outline'>Регистрация</Button>
                 </div>
             </div>
         </aside>

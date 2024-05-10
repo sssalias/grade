@@ -10,34 +10,34 @@ import { RegisterResponse, registerValidate } from 'src/utils/validation/registe
 
 const RegisterPage = () => {
 
-  const [data, setData] = useState<RegisterDto>({
-    email: '',
-    login: '',
-    password: '',
-    repeatPassword: '',
-    isCommit: false
-  })
+    const [data, setData] = useState<RegisterDto>({
+      email: '',
+      login: '',
+      password: '',
+      repeatPassword: '',
+      isCommit: false
+    })
 
-  const [response, setResponse] = useState<RegisterResponse>()
+    const [response, setResponse] = useState<RegisterResponse>()
 
-  useEffect(() => {
-    setResponse(registerValidate(data)) 
-  }, [data])
-  
-  return (
-    <ModalTemplate title='Регистрация'>
-      <form onSubmit={e => e.preventDefault()} className={classes.form}>
-        <fieldset>
-          <SimpleField value={data.email} onChange={(value) => setData({...data, email: value})} label='E-mail' type='email'/>
-          <SimpleField value={data.login} onChange={(value) => setData({...data, login: value})} label='Логин' type='text'/>
-          <SimpleField value={data.password} onChange={(value) => setData({...data, password: value})} label='Пароль' type='password'/>
-          <SimpleField value={data.repeatPassword} onChange={(value) => setData({...data, repeatPassword: value})} label='Повторите пароль' type='password'/>
-        </fieldset>
-        <Checkbox onChange={(value) => setData({...data, isCommit: value})} label='Согласен с политикой конфидициальности'/>
-        <Button disabled={!response?.success} variant='filled_violet'>Регистрация</Button>
-      </form>
-    </ModalTemplate>
-  )
+    useEffect(() => {
+      setResponse(registerValidate(data)) 
+    }, [data])
+    
+    return (
+      <ModalTemplate title='Регистрация' close={-2}>
+        <form onSubmit={e => e.preventDefault()} className={classes.form}>
+          <fieldset>
+            <SimpleField value={data.email} onChange={(value) => setData({...data, email: value})} label='E-mail' type='email'/>
+            <SimpleField value={data.login} onChange={(value) => setData({...data, login: value})} label='Логин' type='text'/>
+            <SimpleField value={data.password} onChange={(value) => setData({...data, password: value})} label='Пароль' type='password'/>
+            <SimpleField value={data.repeatPassword} onChange={(value) => setData({...data, repeatPassword: value})} label='Повторите пароль' type='password'/>
+          </fieldset>
+          <Checkbox onChange={(value) => setData({...data, isCommit: value})} label='Согласен с политикой конфидициальности'/>
+          <Button disabled={!response?.success} variant='filled_violet'>Регистрация</Button>
+        </form>
+      </ModalTemplate>
+    )
 }
 
 export default RegisterPage

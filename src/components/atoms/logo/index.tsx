@@ -1,5 +1,6 @@
 import logo from 'src/assets/img/Logo/logo.png'
 import classes from './style.module.scss'
+import { Link } from 'react-router-dom'
 
 export type PropsType = {
     size: 'bg' | 'sm'
@@ -15,9 +16,9 @@ const sizes = {
 
 const Logo = ({size}: PropsType) => {
     return (
-        <div style={{width: sizes[size].width, height: sizes[size].height}} className={classes.wrapper}>
+        <Link to='/' style={{width: sizes[size].width, height: sizes[size].height}} className={classes.wrapper}>
             <img className={classes.logo} src={logo} alt="Logo"/>
-        </div>
+        </Link>
     )
 }
 

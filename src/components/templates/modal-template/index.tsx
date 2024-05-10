@@ -10,10 +10,11 @@ import { useNavigate } from 'react-router-dom'
 
 type PropsType = {
     title?: string
-    children?: ReactNode
+    children?: ReactNode,
+    close?: number
 }
 
-const ModalTemplate = ({title, children}:PropsType) => {
+const ModalTemplate = ({title, children, close=-1}:PropsType) => {
 
     const navigate = useNavigate()
 
@@ -25,7 +26,7 @@ const ModalTemplate = ({title, children}:PropsType) => {
                         variant='icon'
                         icon={<Icon path={closeBlack}/>}
                         iconHover={<Icon path={closelime}/>}
-                        onClick={() => navigate(-1)} 
+                        onClick={() => navigate(close)} 
                     />
                 </div>
                 <div className={classes.body}>
