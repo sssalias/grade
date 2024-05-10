@@ -3,11 +3,11 @@ import { useTeamsTable } from './config'
 import {useTeamsStore} from 'src/store'
 
 const TeamsTable = () => {
-    const {columns, data} = useTeamsTable()
+    const {columns, data, footer} = useTeamsTable()
     const {space} = useTeamsStore()
 
     return (
-        <Table columns={columns} data={data.slice(0, space)}/>
+        <Table columns={columns} data={data.slice(0, space)} footer={footer}/>
     )
 }
 

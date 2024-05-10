@@ -6,6 +6,8 @@ import { getMaxValue } from 'src/utils/sort'
 import {useTeamsStore} from 'src/store/useTeamsStore'
 import {TeamDto} from 'src/api/dto/team/TeamDto.ts'
 
+import infoWhite from 'src/assets/img/icons/info/info_white.svg'
+
 export const useTeamsTable = () => {
     const columns = [
         {title: 'Ранг', key: 'rank', dataIndex: 'rank', render: (_:any, record:TeamDto) => (<h4>{data.indexOf(record) + 1}st</h4>)},
@@ -33,10 +35,19 @@ export const useTeamsTable = () => {
         )},
     ]
 
+    const footer = () => (
+        <div className={classes.footer}>
+            <Icon path={infoWhite} size={{height: 20, width: 20}}/>
+            <h4>Team Elo Rankings</h4>
+            <span>k=32, init=1000</span>
+        </div>
+    )
+
     const {data} = useTeamsStore()
 
     return {
         columns,
-        data
+        data,
+        footer
     }
 }

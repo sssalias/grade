@@ -12,3 +12,22 @@
     }
 
 }
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: rgba(16, 0, 37, 0.15);
+    border-radius: 0 0 10px 10px;
+    border: 2px solid var(--main-violet);
+    border-top: 0;
+
+    h4 {
+        color: white;
+    }
+    span {
+        color: var(--main-brightest-violet);
+    }
+}
