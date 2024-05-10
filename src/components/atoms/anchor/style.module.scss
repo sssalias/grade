@@ -1,0 +1,22 @@
+.container {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    height: 64px;
+    width: 64px;
+    border-radius: 10px;
+
+    img {
+        rotate: -90deg;
+    }
+}
+
+.is__visible {
+    transition: .4s;
+    opacity: 1;
+}
+
+.is__not__visible {
+    transform: .4s;
+    opacity: 0;
+}

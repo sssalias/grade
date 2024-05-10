@@ -65,6 +65,7 @@ table {
     border-radius: 10px 10px 0 0;
     border: 2px solid var(--main-violet);
   }
+  
 
   th, td {
     padding: 20px 10px;
@@ -73,9 +74,11 @@ table {
   th {
     text-align: left;
     &:nth-child(1) {
+      border-left: 1px solid var(--main-violet);
       border-radius: 0 0 0 0;
     }
     &:nth-last-child(1) {
+      border-right: 1px solid var(--main-violet);
       border-radius: 0 0 0 0;
     }
   }

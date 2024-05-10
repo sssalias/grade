@@ -1,7 +1,6 @@
 import { useQuery } from 'react-query'
 import { useParams } from 'react-router-dom'
 import { MatchDto } from 'src/api/dto/match'
-// import { MatchDto } from 'src/api/dto/match'
 import MatchesService from 'src/api/services/MatchesService'
 import { useMatchDetailsStore } from 'src/store/useMatchDetailsStore'
 

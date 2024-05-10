@@ -1,9 +1,11 @@
-import moment from 'moment'
-import 'moment/locale/ru'
+import moment from 'moment/dist/moment'
 
-moment.locale('ru')
+import ru from 'moment/dist/locale/ru'
 
-export const parseDate = (unixTimestamp:number) => {
+moment.locale('ru', ru)
+
+
+export const parseDate = (unixTimestamp:number, cap=true) => {    
     const result = String(moment(new Date(unixTimestamp * 1000), "YYYYMMDD").fromNow())
-    return result.charAt(0).toUpperCase() + result.slice(1)
+    return cap ? result.charAt(0).toUpperCase() + result.slice(1) : result
 }

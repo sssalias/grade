@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
 }
 
 
@@ -91,4 +92,21 @@ h1 {
 }
 
 
-.actions {}
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.warning {
+    color: var(--main-yellow);
+}

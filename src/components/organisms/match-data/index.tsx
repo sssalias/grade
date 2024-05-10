@@ -6,7 +6,16 @@ import Icon from 'src/components/atoms/icon'
 
 import radiant from 'src/assets/img/icons/teams/radiant.svg'
 import dire from 'src/assets/img/icons/teams/dire.svg'
+
+import scanBlack from 'src/assets/img/icons/scan/scan_black.svg'
+import saveBlack from 'src/assets/img/icons/save/save_black.svg'
+
+import warningYellow from 'src/assets/img/icons/warning/warning_yellow.svg'
+
+
 import MatchesService from 'src/api/services/MatchesService'
+import Button from 'src/components/atoms/button'
+
 
 
 const MatchData = () => {
@@ -33,7 +42,7 @@ const MatchData = () => {
                     <div className={classes.score__data}>
                         <h3>{MatchesService.getGameMode(data.game_mode)}</h3>
                         <h2>{parseTime(data.duration)}</h2>
-                        <h4>Закончился {parseDate(data.start_time)}</h4>
+                        <h4>Закончился {parseDate(data.start_time, false)}</h4>
                     </div>
                     <h1 className={!data.radiant_win ? classes.winner__score : classes.loser__score}>{data.dire_score}</h1>
                 </div>
@@ -55,9 +64,16 @@ const MatchData = () => {
 
             </section>
 
-            {/* TODO: create actions */}
-            <section>
-
+            {/* actions */}
+            <section className={classes.actions}>
+                <div>
+                    <Icon path={warningYellow} size={{height: 20, width: 20}}/>
+                    <span className={classes.warning}>Запись этого матча не может быть проанализирована, так как недоступна вся информация о матче</span>
+                </div>
+                <div>
+                    <Button icon={<Icon path={scanBlack} size={{height: 20, width: 18}}/>} variant='filled_normal'>Анализ</Button>
+                    <Button icon={<Icon path={saveBlack} size={{height: 20, width: 20}}/>} variant='filled_normal'>Загрузить запись</Button>
+                </div>
             </section>
 
         </div>

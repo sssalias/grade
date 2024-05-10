@@ -13,7 +13,8 @@ export const useMatchesFetchHook = () => {
         {
             onSuccess: ({data}) => {
                 set(data)
-            }
-        }
+            },
+            refetchInterval: 10000,
+        },
     )
 }
