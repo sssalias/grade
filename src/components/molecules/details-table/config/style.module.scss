@@ -6,14 +6,15 @@
     display: flex;
     justify-content: baseline;
     gap: 5px;
-    font-weight: normal;
-
     img {
         border-radius: 2px;
     }
 
     h4 {
         color: var(--main-lime);
+    }
+    span {
+        font-size: 12px;
     }
 }
 
@@ -30,7 +31,56 @@
     color: var(--main-yellow);
 }
 
-.items {}
+.inventory {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.items__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 4px;
+}
+.items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+}
+
+.backpack, .backpack__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.backpack {
+    gap: 6px;
+}
+
+.backpack__list  {
+    gap: 2px;
+}
+
+.items, .backpack__list {
+    img {
+        border-radius: 4px;
+    }
+}
+
+
+.shard {
+    display: flex;
+    flex-direction: column;
+}
+
+.stuff {
+    img {
+        border-radius: 50%;
+    }
+}
 
 .caption__container {
     display: flex;

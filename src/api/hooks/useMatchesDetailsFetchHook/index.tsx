@@ -7,6 +7,8 @@ export const useMatchesDetailsFetchHook = () => {
     
     const [loading, setLoading] = useState(true)
 
+    console.log(start, end);
+    
 
     useEffect(() => {      
         MatchesService.getMatchesDetails(data.slice(start, end))

@@ -1,9 +1,10 @@
 .container {
+    width: 100%;
     background-color: var(--main-dark-mask);
-    //min-width: 640px;
     display: flex;
     flex-direction: column;
     border-radius: 4px 4px 0 0;
+    transition: .4s;
     &::after {
         transition: .4s;
         content: '';
@@ -11,17 +12,43 @@
         background-color: var(--main-light-gray);
         border-radius: 4px;
         height: 2px;
+      }
+      
+}
+
+
+.field__focus {
+    transition: .4s;
+    &::after {
+        transition: .4s;
+        content: '';
+        flex: auto;
+        background-color: var(--main-lime);
+        border-radius: 4px;
+        height: 2px;
       } 
 }
+
+.field__hover {
+    transition: .4s;
+    &::after {
+        transition: .4s;
+        content: '';
+        flex: auto;
+        background-color: var(--main-white);
+        border-radius: 4px;
+        height: 2px;
+      }
+}
+
 .wrapper {
     width: 100%;
     display: flex;
     gap: 10px;
     align-items: center;
-    
 }
 
-.button, .input {
+.button, .field {
     padding: 15px;
     background: none;
     outline: none;
@@ -29,10 +56,10 @@
     color: var(--main-white);
 } 
 
-.input {
+.field {
     flex-grow: 1;
     font-weight: normal;
 }
-.input::placeholder {
+.field::placeholder {
     color: var(--main-white);
 }

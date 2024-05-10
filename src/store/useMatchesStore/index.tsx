@@ -23,7 +23,7 @@ export const useMatchesStore = create<MatchesState & MatchesActions>()(immer(set
     dataDetails: [],
     step: 2,
     start: 0,
-    end: 3,
+    end: 5,
     set: (data) => {
         setState({data})
     },
@@ -34,6 +34,6 @@ export const useMatchesStore = create<MatchesState & MatchesActions>()(immer(set
         setState(state => ({dataDetails: [...state.dataDetails, ...data]}))
     },
     clearData: () => {
-        setState({data: [], dataDetails: [], step: 2, start: 0, end: 3})
+        setState({data: [], dataDetails: [], step: 2, start: 0, end: 5})
     }
 })))

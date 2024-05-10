@@ -1,0 +1,94 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.winner__container {
+    padding: 10px 15px;
+    background-color: var(--main-white);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.radiant {
+    color: color-mix(in oklab, #FA7000, rgba(0, 0, 0, .5));
+}
+
+.dire {
+    color: color-mix(in oklab, #BBDD00, rgba(0, 0, 0, .5)); 
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.score__data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+
+    h3 {
+        text-transform: capitalize;
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    h4 {
+        color: var(--main-brightest-violet);
+    }
+}
+
+h1 {
+    font-size: 64px;
+}
+
+.winner__score {
+    color: var(--main-lime);
+}
+
+.loser__score {
+    color: var(--main-orange);
+}
+
+.meta__data {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+
+    h4 {
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+    }
+    span {
+        font-size: 14px;
+        color: var(--main-brightest-violet);
+    }
+}
+
+
+.actions {}

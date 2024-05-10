@@ -13,15 +13,15 @@ const IndexPage = () => {
     return (
         <MainTemplate>
             <div className={classes.wrapper}>
-                <div>
-                    <Logo size='bg'/>
-                </div>
+                <Logo size='bg'/>
                 <div className={classes.info__wrapper}>
-                    <SearchField placeholder='Поиск по сайту...'/>
-                    <nav className={classes.navigation}>
-                        <Button onClick={() => navigate('/matches')} className={classes.button} variant='filled_normal'>Список матчей</Button>
-                        <Button onClick={() => navigate('/teams')} className={classes.button} variant='filled_normal'>Список команд</Button>
-                    </nav>
+                    <section className={classes.actions}>
+                        <SearchField placeholder='Поиск по сайту...'/>
+                        <nav className={classes.navigation}>
+                            <Button onClick={() => navigate('/matches')} className={classes.button} variant='filled_normal'>Список матчей</Button>
+                            <Button onClick={() => navigate('/teams')} className={classes.button} variant='filled_normal'>Список команд</Button>
+                        </nav>
+                    </section>
                     <AdvantagesList/>
                 </div>
             </div>
